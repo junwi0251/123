@@ -1,0 +1,95 @@
+/* 전체 컨테이너 */
+.DAContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 화면 전체 높이 */
+    background-color: #f9f9f9; /* 연한 배경색 */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* 안내 메시지 박스 */
+.DAMessageBox {
+    text-align: center;
+    max-width: 500px;
+    background: #ffffff; /* 흰색 배경 */
+    border: 1px solid #e0e0e0; /* 연한 회색 테두리 */
+    border-radius: 8px; /* 둥근 모서리 */
+    padding: 30px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+}
+
+/* 확인 메시지 박스 */
+.DAConfirmBox {
+    text-align: center;
+    max-width: 400px;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 30px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 헤딩 */
+.DAHeading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* 텍스트 */
+.DAText {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* 버튼 컨테이너 */
+.DAButtonContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* 버튼 스타일 */
+.DAConfirmButton,
+.DACancelButton,
+.DADeleteButton {
+    font-size: 1rem;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.DAConfirmButton {
+    background-color: #007bff; /* 파란색 */
+    color: white;
+}
+
+.DAConfirmButton:hover {
+    background-color: #0056b3; /* 더 진한 파란색 */
+}
+
+.DACancelButton {
+    background-color: #e0e0e0; /* 연한 회색 */
+    color: #333;
+}
+
+.DACancelButton:hover {
+    background-color: #c0c0c0; /* 더 진한 회색 */
+}
+
+.DADeleteButton {
+    background-color: #dc3545; /* 붉은색 */
+    color: white;
+}
+
+.DADeleteButton:hover {
+    background-color: #a71d2a; /* 더 진한 붉은색 */
+}

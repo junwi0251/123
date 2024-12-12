@@ -1,0 +1,128 @@
+/* Signup.module.css */
+
+/* Background styling */
+.signupbackground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Container styling */
+.signupcontainer {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Form heading */
+.signuph2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+/* Form styling */
+.signupform {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+/* Form group styling */
+.signupformgroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.signupformgroup label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Input fields */
+.signupformgroup input {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.signupformgroup input:focus {
+    border-color: #1890ff;
+}
+
+/* Password strength bar */
+.signuppasswordstrengthbar {
+    height: 6px;
+    background: #e0e0e0;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 0.5rem;
+}
+
+.signupstrengthbox {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+.signupstrengthtext {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Error message */
+.signuperror {
+    color: #ff4d4f;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Signup button */
+.signupbutton {
+    padding: 0.8rem;
+    background-color: #1890ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.signupbutton:hover {
+    background-color: #40a9ff;
+    transform: translateY(-2px);
+}
+
+.signupbutton:active {
+    transform: translateY(0);
+}
+
+/* Signup link */
+.signupsignup {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.signupsignup a {
+    color: #1890ff;
+    text-decoration: none;
+}
+
+.signupsignup a:hover {
+    text-decoration: underline;
+}

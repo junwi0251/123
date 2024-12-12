@@ -1,0 +1,247 @@
+/* 기본 레이아웃 */
+.todolistAppContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #E6E6FA;
+  overflow: hidden; /* 전체 화면에서 벗어나지 않도록 */
+}
+
+/*기본 레이아웃 추가 수정*/
+.todolistAppContainer {
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto; /* 필요 시 스크롤 활성화 */
+}
+
+
+/* 폼 섹션 */
+.todolistFormSection {
+  width: 70%; /* 폼 섹션을 화면의 70% 차지 */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  overflow-y: auto; /* 폼 내용이 길어질 경우 스크롤 허용 */
+  color: #9C89B8;
+}
+
+/* 제목 스타일 */
+.todolistCustomHeading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* "To Do" 텍스트 스타일 */
+.todolistToDo {
+  color: #CEC5FC;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* "List!!" 텍스트 스타일 */
+.todolistList {
+  color: #9181F4;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* 폼 내부 요소 */
+.todolistTaskForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.todolistLabel {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.todolistInput, .todolistSelect, .todolistButton {
+  padding: 8px;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.todolistButton {
+  background-color: #9C89B8;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.todolistButton:hover {
+  background-color: #6D5A8D;
+}
+
+/* 색상 선택기 */
+.todolistColorPicker {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.todolistColorBox {
+  width: 30px;
+  height: 30px;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.todolistColorBox.todolistSelected {
+  border-color: black;
+}
+
+/* 달력 섹션 */
+.todolistCalendarSection {
+  width: 25%; /* 달력 섹션 너비 */
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  overflow-y: auto; /* 많은 데이터가 있을 때 스크롤 허용 */
+}
+
+.todolistCalendarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.todolistCalendarHeaderTitle {
+  font-size: 1.2rem;
+  margin: 0;
+  text-align: center;
+}
+
+.todolistCalendarHeaderButton {
+  background-color: #9C89B8;
+  color: white;
+  border: none;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  height: 25px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todolistCalendarHeaderButton:hover {
+  background-color: #6D5A8D;
+}
+
+.todolistCalendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.todolistCalendarDay {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+.todolistCalendarDaySelected {
+  background-color: #cce5ff;
+  color: #004085;
+}
+
+.todolistDayInfo {
+  margin-top: 5px;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+/* 체크리스트 섹션 */
+.todolistTaskList {
+  width: 30%; /* 섹션 너비 조정 */
+  height: calc(90vh - 40px); /* 화면 높이에서 패딩 제외 */ /* 100VH - 40PX에서 수정*/
+  overflow-y: auto; /* 스크롤 가능 */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+/* 체크리스트 아이템 */
+.todolistTaskItem {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.todolistTaskHeader {
+  position: relative; /* 자식 요소를 배치하기 위해 상대 위치 설정 */
+}
+
+/* 완료 버튼 스타일 */
+.todolistHighlightTaskButton {
+  position: absolute;
+  top: 5px; /* 상단 모서리에서 5px */
+  right: 5px; /* 오른쪽 모서리에서 5px */
+  background-color: lightgray; 
+  color: white; /* 흰색 글씨 */
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 가벼운 그림자 효과 */
+  z-index: 1; /* 다른 요소보다 위에 표시되도록 */
+}
+
+/* 완료 버튼 호버 효과 */
+.todolistHighlightTaskButton:hover {
+  background-color: gray; 
+}
+
+/* 체크리스트 삭제 버튼 */
+.todolistDeleteTaskButton {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.todolistDeleteTaskButton:hover {
+  color: red;
+}
+
+/* 반응형 디자인 */
+@media screen and (max-width: 768px) {
+  .todolistAppContainer {
+    flex-direction: column;
+  }
+
+  .todolistFormSection, .todolistTaskList, .todolistCalendarSection {
+    width: 100%;
+    height: auto;
+  }
+
+}
+ 
